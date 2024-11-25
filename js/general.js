@@ -1,5 +1,5 @@
 let formState = false;
-let path = "https://raw.githubusercontent.com/zurika777/NumberOneProgramer/refs/heads/main/data/lang.json"
+let path = "https://raw.githubusercontent.com/zurika777/NumberThu/refs/heads/master/data/lang.json"
 let language = "ka";
 let langs = [];
 
