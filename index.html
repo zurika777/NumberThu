@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+<button type="button" id="openForm" onclick="openForm()">ფორმის გახსნა</button>
+    <button type="button" id="swichLanguage" onclick="swichLanguage()">English</button>
+    <div id="postList"></div>
+    <div id="createForm">
+        <form action="" id="createPost">
+            <input type="text" name="title" id="title" placeholder="შეიყვანე სათაური">
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="შეიყვანე ტექსტი"></textarea>
+            <button type="button" id="add" onclick="createNewPost()">დამატება</button>
+        </form>
+    </div>
+<script src="js/functions.js"></script>
+<script src="js/general.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/request.js"></script>
+<script src="js/tests.js"></script>
+</body>
+
+</html>
