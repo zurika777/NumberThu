@@ -1,7 +1,7 @@
 let formState = false;
 let path = "https://raw.githubusercontent.com/zurika777/NumberThu/refs/heads/master/data/lang.json"
 let language = "ka";
-let langs = [];
+let langs = {};
 
 const openForm = () => {
     let form = document.getElementById('createForm');
@@ -91,14 +91,14 @@ const createNewHtml = (value, top = false) => {
 const swichLanguage = () => {
     if(language ==="ka"){
         language ="en";
-        document.getElementById('swichLanguage').innerText ="ქართული";
+        document.getElementById('swichLanguage').innerText="ქართული";
     }else{
         language = 'ka';
-         document.getElementById('swichLanguage').innerText ="English";
+         document.getElementById('swichLanguage').innerText="English";
     }
-    document.getElementById('openForm').innerText = langs[language].openForm;
-    document.getElementById('noPosts').innerText = langs[language].noPosts;
-    document.getElementById('add').innerText = langs[language].add;
+    document.getElementById('openForm').innerText=langs[language].openForm;
+      document.getElementById('noPosts').innerText = langs[language].noPosts;
+    document.getElementById('add').innerText=langs[language].add;
 }
 
 const pageOnload = async() => {
@@ -109,15 +109,17 @@ const pageOnload = async() => {
     if(fetchData){
         langs = fetchData;
     }
+    document.getElementById('noPosts').innerText = langs[language].noPosts;
     let posts = getPost();
     if(posts.length > 0){
-        for(let i = 0; i< posts.length; i++){
+        for(let i = 0; i < posts.length; i++){
             createNewHtml(posts[i], true);
         }
-    }
+}
     let post = document.createElement('h3');
     post.setAttribute("id", "noPosts");
     post.innerText = langs[language].noPosts;
+
 }
 
 window.onload = pageOnload();
