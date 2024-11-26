@@ -89,15 +89,27 @@ const createNewHtml = (value, top = false) => {
     }
 }
 const swichLanguage = () => {
+     const input = document.getElementById('title');
+     const textArea = document.getElementById('content');
+
+    const button = document.getElementById('swichLanguage');
     if(language ==="ka"){
         language ="en";
         document.getElementById('swichLanguage').innerText="ქართული";
+         input.placeholder = langs[language].addTitle;  // ინგლისური
+         //button.innerText = "ქართული";  // ღილაკის ტექსტი შეიცვლება ქართულად
+         textArea.placeholder = langs[language].addText;
     }else{
         language = 'ka';
          document.getElementById('swichLanguage').innerText="English";
+         input.placeholder = langs[language].addTitle;  // ქართული
+          // button.innerText = "English";  // ღილაკის ტექსტი შეიცვლება ინგლისურად
+           textArea.placeholder = langs[language].addText;    // ქართული
+
     }
+
     document.getElementById('openForm').innerText=langs[language].openForm;
-      document.getElementById('noPosts').innerText = langs[language].noPosts;
+      document.getElementById('noPosts').innerText=langs[language].noPosts;
     document.getElementById('add').innerText=langs[language].add;
 }
 
@@ -109,7 +121,7 @@ const pageOnload = async() => {
     if(fetchData){
         langs = fetchData;
     }
-    document.getElementById('noPosts').innerText = langs[language].noPosts;
+    document.getElementById('noPosts').innerText=langs[language].noPosts;
     let posts = getPost();
     if(posts.length > 0){
         for(let i = 0; i < posts.length; i++){

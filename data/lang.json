@@ -3,12 +3,16 @@
         "closeForm": "ფორმის დახურვა",
         "openForm": "ფორმის გახსნა",
         "noPosts": "ჩანაწერი არ მოიძებნა",
-        "add": "დამატება"
+        "add": "დამატება",
+        "addTitle": "შეიყვანე სათაური",
+        "addText": "შეიყვანე ტექსტი"
     },
     "en" : {
         "closeForm": "Close form",
         "openForm": "Open Form",
         "noPosts": "No posts found",
-        "add": "Add"
+        "add": "Add",
+        "addTitle": "Add Title",
+        "addText": "Add Text"
      }
 }
