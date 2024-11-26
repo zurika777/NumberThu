@@ -1,7 +1,7 @@
 let formState = false;
 let path = "https://raw.githubusercontent.com/zurika777/NumberThu/refs/heads/master/data/lang.json"
 let language = "ka";
-let langs = {};
+let langs = [];
 
 const openForm = () => {
     let form = document.getElementById('createForm');
@@ -89,22 +89,21 @@ const createNewHtml = (value, top = false) => {
     }
 }
 const swichLanguage = () => {
-     const input = document.getElementById('title');
-     const textArea = document.getElementById('content');
-
+     const addTitle = document.getElementById('title');
+     const addText = document.getElementById('content');
     const button = document.getElementById('swichLanguage');
     if(language ==="ka"){
         language ="en";
         document.getElementById('swichLanguage').innerText="ქართული";
-         input.placeholder = langs[language].addTitle;  // ინგლისური
+         addTitle.placeholder = langs[language].addTitle;  // ინგლისური
          //button.innerText = "ქართული";  // ღილაკის ტექსტი შეიცვლება ქართულად
-         textArea.placeholder = langs[language].addText;
+         addText.placeholder = langs[language].addText;
     }else{
         language = 'ka';
          document.getElementById('swichLanguage').innerText="English";
-         input.placeholder = langs[language].addTitle;  // ქართული
+         addTitle.placeholder = langs[language].addTitle;  // ქართული
           // button.innerText = "English";  // ღილაკის ტექსტი შეიცვლება ინგლისურად
-           textArea.placeholder = langs[language].addText;    // ქართული
+         addText.placeholder = langs[language].addText;    // ქართული
 
     }
 
